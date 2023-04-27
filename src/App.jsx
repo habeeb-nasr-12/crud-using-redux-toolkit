@@ -11,7 +11,7 @@ function App() {
     e.preventDefault()
     let { name, value } = e.target
     setUser({ ...user, [name]: value })
-  console.log(user)
+    console.log(user)
   }
   return (
     <>
@@ -21,7 +21,7 @@ function App() {
         <input type="text" name='username' onChange={handleChange} placeholder='UserName..' />
         <button onClick={() => {
           dispatch(addUser({
-            id: userList[userList.length-1].id+1,
+            id: userList[userList.length - 1].id + 1,
             name: user.name,
             username: user.username
           }))
@@ -32,26 +32,26 @@ function App() {
           return <div key={ele}>
             <h1>{user.name}</h1>
             <h2>{user.username}</h2>
-        <input type="text" name='newusername' onChange={(e)=>{
-          setNewUser(e.target.value)
-          
-        }} placeholder='newusername..' />
-        <button onClick={
-          ()=>{
-            dispatch(updateUser({
-              id:user.id,
-              newusername:newUser
-            }))
-          }
-        }
-        
-        >Update username</button>
-        <button onClick={
-          ()=>{
-            dispatch(deleteUser({id:user.id}))
-          }
-        }>Delete</button>
-      
+            <input type="text" name='newusername' onChange={(e) => {
+              setNewUser(e.target.value)
+
+            }} placeholder='newusername..' />
+            <button onClick={
+              () => {
+                dispatch(updateUser({
+                  id: user.id,
+                  newusername: newUser
+                }))
+              }
+            }
+
+            >Update username</button>
+            <button onClick={
+              () => {
+                dispatch(deleteUser({ id: user.id }))
+              }
+            }>Delete</button>
+
 
           </div>
         }
