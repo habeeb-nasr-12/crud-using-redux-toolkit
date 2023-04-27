@@ -1,0 +1,28 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.displayUsers {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+}
+
+.displayUsers div {
+  width: 60%;
+  height: 60%;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+.addUser{
+  display: flex;
+  justify-content: center;
+}
